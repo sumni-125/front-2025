@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, install-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+    
+        *{
+            font-family: "Dongle", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .wrap{
+            width: 550px;
+            
+            border: 1px solid black;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .title{
+            margin: 0 auto;
+            padding: 10px;
+            
+            width: 500px;
+
+        }
+        .info{
+            width: 500px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        label{
+            
+            width: 60px;
+            display: inline-block;
+            /*border: 1px solid black;*/
+        }
+        input[type="text"]{
+            margin-left: 30px;
+            margin-bottom: 10px;
+        }
+        .분야{
+            width: 500px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .동기{
+            width: 500px;
+            margin: 0 auto;
+            padding: 10px;
+            box-sizing: border-box;
+            
+        }
+        .btn-box{
+            text-align: center;
+        }
+        button{
+            border: none;
+            padding: 10px;
+            margin-right: 3px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!--전체-->
+    <div class="wrap">
+
+        <!--제목-->
+        <div class="title">
+            <h1>프런트엔드 개발자 지원서</h1>
+
+            <h3>html css javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</h3>
+            <hr><!--줄만 나오는 태그-->
+        </div>
+
+
+        <div class="info">
+
+            <h2>개인정보</h2>
+            <ui><!--근데이거줄을어떻게?맞추는지???-->
+                <li><label>이름</label><input type="text" placeholder="공백없이 입력하세요"></li>
+                <li><label>연락처</label><input type="text"></li>
+            </ui>
+        </div>
+
+
+        <!--지원분야-->
+        <div class="분야">
+            <h2>지원분야</h2>
+            <ul>
+                <li><input type="radio" name="qnsdi">웹퍼블리싱</li>
+                <li><input type="radio" name="qnsdi">웹애플리케이션 개발</li>
+                <li><input type="radio" name="qnsdi">웹퍼블리싱</li>
+            </ul>
+            
+        </div>
+
+
+        <!--지원동기기-->
+       
+        <div class="동기">
+            <h2>지원동기</h2>
+            <textarea cols="110" rows="5"  placeholder="원서 지원 동기를 간략히 써 주세요"></textarea>
+            
+        </div>
+
+        <div class="btn-box">
+            <button>접수하기</button><button>다시쓰기</button>
+
+        </div>
+
+
+
+
+    </div>
+
+</body>
+</html>

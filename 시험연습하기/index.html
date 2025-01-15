@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*header style*/
+        header{
+            height: 100px;
+            background-color: rgb(245, 248, 248);
+            display: flex;
+            position: relative
+        }
+
+        .title{
+            position: absolute;
+            left: 10px;
+            top: 20px;
+            /*border: 1px solid black;*/
+            
+        }
+
+        .search{
+            /*border: 1px solid black;*/
+            position: absolute;
+            right:10px;
+            bottom:20px;
+            display: flex;
+        }
+
+        .search input{
+            width: 150px;
+            height: 50px;
+            border: none;
+
+        }
+        
+        .search img{
+            width: 60px;
+            height: 50px;
+            
+        }
+
+
+
+        /*nav style*/
+        nav{
+            height: 40px;
+            padding: 20px;
+            background-color: rgb(232, 243, 243);
+        }
+
+        nav a{
+            color: black;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+
+
+        /*footer style*/
+        footer{
+            height: 60px;
+            display: flex;
+        }
+        footer div{
+            width: 33.3%;
+            background-color: rgb(233 , 239 , 239 );
+            padding-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title">
+            <img src="./images/logo.png" alt="logo">
+        </div>
+        <div class="search">
+            <input class="search-bar" type="text"> <img src="./images/검색.png" alt="search-img">
+        </div>
+        
+    </header>
+
+    <nav>
+        <a href="login.html">로그인</a>
+        <a href="joinus.html">회원가입</a>
+        <a href="index.html">홈으로</a>
+    </nav>
+
+    <section>
+
+       
+    </section>
+
+    <footer>
+        <div class="footer-img">
+            <img src="./images/footer_acorn.png" alt="footer-img">
+        </div>
+        <div class="footer-text">
+            (주)에이콘이즈 에이콘아카데미(홍대)
+        </div>
+        <div class="footer-text">
+            COPYRIGHT(C) HBILAB ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+    
+</body>
+</html>

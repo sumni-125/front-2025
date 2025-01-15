@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        - 높이(height): 60px    
+        - background-color : rgb (233 , 239 , 239 )설정
+        - footer영역 안에 3개의 영역 분할 
+        - item 영역의 너비: 33% 설정
+        - item 영역의 높이: 60px;
+        - 각 영역에 제시된 화면과 같이 나타나도록 구성합니다 .
+        - footer의 이미지 파일:  images폴더  footer_acorn.png
+        */
+        footer{
+            height: 60px;
+            display: flex;
+        }
+        footer div{
+            width: 33.3%;
+            background-color: rgb(233 , 239 , 239 );
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <footer>
+        <div class="footer-img">
+            <img src="./images/footer_acorn.png" alt="footer-img">
+        </div>
+        <div class="footer-text">
+            (주)에이콘이즈 에이콘아카데미(홍대)
+        </div>
+        <div class="footer-text">
+            COPYRIGHT(C) HBILAB ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+</body>
+</html>

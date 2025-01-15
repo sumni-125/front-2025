@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul{
+            list-style: none;
+            display: flex;
+            width: 970px;
+            flex-wrap: wrap;/*줄바꿈*/
+            border: 1px solid black;
+            margin: 0 auto;
+            padding: 0px;
+        }
+
+        li{
+            height: 320px;
+            width: 300px;
+            padding: 10px;
+            border: 1px solid black;
+
+            text-align: center;
+        }
+
+        .img a:hover{
+            background-image: url(data:image/png;base64,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);
+            background-position: center;
+            background-size: cover;
+            
+        }
+
+        .img a{
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            width: 212px;
+            height: 212px;
+            
+        }
+        .상품1{
+            background-image: url("https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/587074433918563-13eedcf2-7040-493c-aed8-b348e1c3bb8f.jpg");
+        }
+        .상품2{
+            background-image: url("https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/c58c/59e0c6b382b5ff0ac3b0e6d7667050259c93b819b9a57415e8e9c8bcc96d.jpg");
+        }
+        .상품3{
+            background-image: url("https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1382082613911010-4795e952-d5fa-406e-b439-16d23befbccf.jpg");
+        }
+        .상품4{
+            background-image: url("https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2024/08/07/18/7/2b68ee7c-689d-496c-89cd-37ff9a52f6d0.jpg");
+        }
+
+        p{
+            margin: 0px;
+            
+        }
+
+
+
+        .text{
+            text-align: left;
+        }
+
+        .rocket{
+            width: 64px;
+            height: 20px;
+            margin-top: 20px;
+            
+        }
+        .price{
+            font-weight: bold;
+            color: rgb(180, 0, 0);
+            font-size: 16pt;
+            
+            margin-top: 10px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    
+    <ul>
+
+        <li>
+            <div class="img"><a class="상품1" href="#"></a></div>
+
+            <div class="text">
+                <a href="#">일상공감 창틀 막아보게 대형 1세트</a>
+                <p class="price">25000원 <img class="rocket" src="https://image6.coupangcdn.com/image/cmg/icon/ios/logo_rocket_large@3x.png" alt="로켓배송"></p>
+                <p>신상품</p>
+            </div>
+            
+            
+        </li>
+
+        <li>
+            <div class="img"><a class="상품2" href="#"></a></div>
+
+            <div class="text">
+                <a href="#">일상공감 창틀 막아보게 대형 1세트</a>
+                <p class="price">25000원 <img class="rocket" src="https://image6.coupangcdn.com/image/cmg/icon/ios/logo_rocket_large@3x.png" alt="로켓배송"></p>
+                <p>신상품</p>
+            </div>
+            
+            
+        </li>
+
+        <li>
+            <div class="img"><a class="상품3" href="#"></a></div>
+
+            <div class="text">
+                <a href="#">일상공감 창틀 막아보게 대형 1세트</a>
+                <p class="price">25000원 <img class="rocket" src="https://image6.coupangcdn.com/image/cmg/icon/ios/logo_rocket_large@3x.png" alt="로켓배송"></p>
+                <p>신상품</p>
+            </div>
+            
+            
+        </li>
+
+
+        <li>
+            <div class="img"><a class="상품4" href="#"></a></div>
+
+            <div class="text">
+                <a href="#">일상공감 창틀 막아보게 대형 1세트</a>
+                <p class="price">25000원 <img class="rocket" src="https://image6.coupangcdn.com/image/cmg/icon/ios/logo_rocket_large@3x.png" alt="로켓배송"></p>
+                <p>신상품</p>
+            </div>
+            
+            
+        </li>
+        
+        <li>
+            <div class="img"><a class="상품4" href="#"></a></div>
+
+            <div class="text">
+                <a href="#">일상공감 창틀 막아보게 대형 1세트</a>
+                <p class="price">25000원 <img class="rocket" src="https://image6.coupangcdn.com/image/cmg/icon/ios/logo_rocket_large@3x.png" alt="로켓배송"></p>
+                <p>신상품</p>
+            </div>
+            
+            
+        </li>
+        
+        <li>
+            <div class="img"><a class="상품4" href="#"></a></div>
+
+            <div class="text">
+                <a href="#">일상공감 창틀 막아보게 대형 1세트</a>
+                <p class="price">25000원 <img class="rocket" src="https://image6.coupangcdn.com/image/cmg/icon/ios/logo_rocket_large@3x.png" alt="로켓배송"></p>
+                <p>신상품</p>
+            </div>
+            
+            
+        </li>
+
+    </ul>
+
+    <div class="footer">
+
+        <div class="row1">
+            
+        </div>
+
+        <div class="row2">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+    </div>
+
+</body>
+</html>

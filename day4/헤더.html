@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrap{
+            height: 200px;
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .wrap > div{
+            width: 33.3%;
+            height: 200px;
+            border: 1px solid black;
+        }
+        /*검색바스타일*/
+        .search-bar{
+            border:3px solid rgb(112, 166, 211);
+            width: 300px;
+            height: 50px;
+            border-radius: 50px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            /*배치*/
+
+            position: absolute;
+            bottom: 70px;
+            left: 100px;
+
+        }
+
+        .search-bar input{
+            border: none;
+            outline: none;
+            padding-left: 20px;
+        }
+
+        .search-btn{
+            width: 40px;
+            height: 40px;
+            /*background-color: gray;*/
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6JO-CB3HSZIPWlJl_5K9T2kEUfyo0qtYE3Q&s");
+            background-size: cover;
+        }
+
+        .search-wrap{
+            position: relative;
+        }
+
+        /*메뉴바스타일*/
+        .menu-wrap{
+            /*부모지정*/
+            position: relative;
+        }
+
+        .menu-bar{
+
+            margin: 0px;
+            padding: 0px;
+
+            font-size: 12px;
+
+            /*width: 300px;*/
+            list-style: none;
+            display: flex;
+            /*border: 1px solid black; */
+
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+
+        .menu-bar li{
+            /*border: 1px solid black;*/
+            padding: 3px;
+
+            /*부모기준으로배치하기*/
+            
+
+        }
+
+        .menu-bar img{
+            display: block;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="wrap">
+        <div>로고</div>
+        
+        <!--검색바영역-->
+        <div class="search-wrap"> <!--검색바-->
+            <div class="search-bar">
+                <input type="text">
+                <div class="search-btn"></div>
+            </div>
+        </div>
+
+        <!--메뉴영역-->
+        <div class="menu-wrap">
+            <!--메뉴만들기-->
+            <ul class="menu-bar">
+                <li>
+                    <img src="./image/btn_header_utill1.png"> <span>로그인</span>
+                </li>
+                
+                <li>
+                    <img src="./image/btn_header_utill2.png"><span>내정보</span>
+                </li>
+
+                <li>
+                    <img src="./image/btn_header_utill3.png"><span>장바구니</span>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

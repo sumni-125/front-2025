@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+
+        .menu{
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .menu-item{
+            width: 25%;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid black;
+            
+            text-align: center;
+
+            background-color: pink;
+            color: white;
+
+            position: relative;
+        }
+
+        .menu-item:hover{
+            background-color: palevioletred;
+        }
+
+        .hidden-menu{
+            display: none;/*안보이게*/
+            width: 50%;
+            /*background-color: antiquewhite;*/
+            color: grey;
+            box-sizing: border-box;
+            border: 1px solid beige;
+            /*상위메뉴를 기준으로 배치치*/
+            position: absolute;
+
+            left: 0px;
+            top: 40px;
+
+            z-index: 999;/*이게머임??
+            */
+        }
+
+        .menu-item:hover .hidden-menu{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li class="menu-item">메뉴1
+            <ul class="hidden-menu">
+                <li>하위메뉴1</li>
+                <li>하위메뉴1</li>
+                <li>하위메뉴1</li>
+            </ul>
+        </li>
+        <li class="menu-item">메뉴2
+            <ul class="hidden-menu">
+                <li>하위메뉴1</li>
+                <li>하위메뉴1</li>
+                <li>하위메뉴1</li>
+            </ul>
+        </li>
+        <li class="menu-item">메뉴3
+            <ul class="hidden-menu">
+                <li>하위메뉴1</li>
+                <li>하위메뉴1</li>
+                <li>하위메뉴1</li>
+            </ul>
+        </li>
+        <li class="menu-item">메뉴4
+            <ul class="hidden-menu">
+                <li>하위메뉴1</li>
+                <li>하위메뉴1</li>
+                <li>하위메뉴1</li>
+            </ul>
+        </li>
+    </ul>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa inventore, accusamus, eos facere nostrum magnam quisquam nemo tenetur explicabo in, minus rem a corrupti magni fugiat corporis officia cumque qui?
+        Molestiae nisi ratione error dolore totam atque qui sunt doloremque nulla, id, amet maxime maiores soluta impedit perferendis similique vitae quibusdam voluptas porro, animi officiis odit laboriosam veniam voluptatem. Iste?
+        Culpa a dignissimos, magnam ducimus et beatae sit reiciendis. Eaque explicabo quibusdam, vero alias omnis iure harum. Ut tempore, maxime non, laboriosam saepe natus veniam laborum iure quibusdam voluptas facere.
+        Vitae beatae fugit omnis facilis nesciunt laudantium. Rem numquam quasi aperiam? Impedit quis corrupti neque culpa excepturi? Inventore consequuntur, atque voluptatem cupiditate nostrum deserunt placeat expedita, quibusdam animi officiis odio.
+        Odio nisi, veritatis deserunt assumenda non eligendi quas nostrum sed, ipsum, delectus placeat nobis corporis minima modi illo. Sapiente ullam magnam voluptatum. Voluptates, esse veniam? Officiis dolores exercitationem unde molestiae.
+        Incidunt, nemo, eius quasi magnam dolorem debitis aut nihil assumenda architecto, laudantium eum enim! Quod, quidem harum, eos similique omnis earum doloribus quae, laborum tenetur id rerum vel facere commodi!
+        Vel tempora ipsa non excepturi, dolore cum impedit necessitatibus at, quae sit fugiat! Nobis quisquam vitae facere culpa enim quaerat cumque perspiciatis modi, quam molestias quae eum veniam delectus placeat.
+        Dignissimos recusandae a repudiandae neque laborum esse explicabo, velit nesciunt saepe sint, laudantium molestiae, reiciendis voluptatum mollitia excepturi sunt impedit alias labore quam quos commodi. Magni nostrum nihil cumque accusantium.
+        Nam eum repellat rem minima dicta neque quo itaque nesciunt tenetur earum sit, voluptatum sunt? Minima, aut. Aliquid eaque quos enim necessitatibus ipsam, in corporis quam temporibus. Iste, repellat corrupti.
+        Nam, rerum facilis sapiente magnam excepturi modi omnis sint quia reprehenderit accusamus iste facere nihil corrupti veritatis, vel, tempora ipsum pariatur. Animi dolor voluptatibus dolores aut, nulla suscipit optio ut.
+    </p>
+</body>
+</html>

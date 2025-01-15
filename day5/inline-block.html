@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button{
+            width: 200px;
+            height: 100px;
+            background-image: url(data:image/png;base64,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);
+            background-size: contain;
+            background-position: center;
+
+            background-repeat: no-repeat;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h2>inline-block 태그</h2>
+    <p>
+        인라인의 속성을 갖으면서 크기를 가질 수 있다
+    </p>
+    <h2> inline-block  종류 </h2>
+    <ul>
+        <li>&lt;img&gt;: 이미지를 나타냅니다.</li>
+        <li>&lt;input&gt;: 사용자 입력 필드를 제공합니다.</li>
+        <li>&lt;button&gt;: 클릭 가능한 버튼입니다.</li>
+        <li>&lt;select&gt;: 드롭다운 리스트를 제공합니다.</li>
+        <li>&lt;textarea&gt;: 여러 줄의 입력 필드입니다.</li>
+    </ul>
+
+    <p> 
+        &lt;는 html 엔티티라고 불린다 <br>
+
+        html에서 특정문자( <,>,&)는 태그나 특수기호로 인식될 수 있기 때문에
+        안전하게 출력하려면 엔티티를 사용함
+
+    </p>
+
+    <button>등록</button>
+    <button>조회</button>
+
+</body>
+</html>

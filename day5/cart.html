@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .wrap{
+            width: 900px;
+            border: 1px solid black;
+            padding: 10px;
+
+            margin: 0 auto;
+        }
+
+        .table-wrap{
+            /*height: 600px; border: 1px solid black;*/
+           
+            padding: 20px;
+        }
+
+        .order-wrap{
+            /*height: 200px; border: 1px solid black;*/
+           
+            padding: 20px;
+        }
+
+        /**/
+        table{
+            width: 100%;
+            border: 1px solid gray;
+            border-collapse: collapse;
+
+            margin-top: 50px;
+            font-size: 12px;
+        }
+
+        tr{
+            height: 40px;
+        }
+
+        td{
+            width: 20%;
+            border: 0.1px solid gray;
+        }
+
+        table caption{
+            font-weight: bold;
+            font-size: 20px;
+            padding: 30px;
+        }
+
+        img{
+            width: 60px;
+            height: 60px;
+        }
+
+        td:nth-child(1), td:nth-child(2){
+            text-align: center;
+        }
+        td:nth-child(3), td:nth-child(5){
+            text-align: right;
+        }
+
+        .order-wrap button{
+            font-size: 12px;
+            padding: 10px;
+            background-color: rgb(229, 229, 229);
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #order{
+            margin-top: 20px;
+            font-size: 12px;
+            border: 0.1px solid gray;
+            height: 40px;
+            line-height: 40px;
+            padding-right: 5px;
+            text-align: right;
+        }
+
+        #order-price{
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <!--테이블 영역-->
+        <div class="table-wrap">
+
+            <table>
+                <caption>
+                    CART LIST 
+                    <img src="data:image/png;base64,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">
+                </caption>
+
+                <!--제목줄-->
+                <thead>
+                    <tr>
+                        <th>선택</th>
+                        <th>상품명</th>
+                        <th>가격</th>
+                        <th>구매수량</th>
+                        <th>구매가격</th>
+                    </tr>
+                </thead>
+
+                <!--내용줄-->
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox">선택택</td>
+                        <td>헤드폰</td>
+                        <td>30000</td>
+                        <td><input type="text" value="1"></td>
+                        <td>30000</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox">선택택</td>
+                        <td>헤드폰</td>
+                        <td>30000</td>
+                        <td><input type="text" value="1"></td>
+                        <td>30000</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox">선택택</td>
+                        <td>헤드폰</td>
+                        <td>30000</td>
+                        <td><input type="text" value="1"></td>
+                        <td>30000</td>
+                    </tr>
+                </tbody>
+
+
+            </table>
+
+        </div>
+
+        <!--주문금액 영역-->
+        <div class="order-wrap">
+
+            <div> <button>선택 삭제</button></div>
+
+            <div id="order">
+                합계 <span id="order-price">90000</span>원
+
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+</html>
