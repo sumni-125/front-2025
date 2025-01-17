@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI 계산기</title>
+</head>
+<body>
+    <script>
+        let weight = parseInt(prompt("체중을 입력하세요.(kg)"))
+        let height = parseInt(prompt("키를 입력하세요.(cm)"))
+
+        let result = weight / ((height / 100) * 2) //BMI 계산
+
+        if((weight <= 0) || (height <= 0)){
+            document.write("잘못된 입력입니다")
+        }else{
+            if(result >= 25){
+                document.write(`BMI이 '${result.toFixed(2)}'이므로 '비만'입니다.`)
+            }else if(result >= 23){
+                document.write(`BMI이 '${result.toFixed(2)}'이므로 '과체중'입니다.`)
+            }else if(result >= 18.5){
+                document.write(`BMI이 '${result.toFixed(2)}'이므로 '정상'입니다.`)
+            }else if(result < 18.5){
+                document.write(`BMI이 '${result.toFixed(2)}'이므로 '저체중'입니다.`)
+            }
+        }
+    </script>
+</body>
+</html>

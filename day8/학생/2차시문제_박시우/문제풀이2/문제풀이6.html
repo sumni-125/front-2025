@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = parseInt(prompt("숫자 입력"));
+        let odd=0,even=0;
+        for(let i=0; i<=user; i++){
+            if(i%2===0){
+                even+=i;
+            } else{
+                odd+=i;
+            }
+        }
+        alert("홀수의 합 : "+odd+" 짝수의 합 : "+even);
+    </script>
+</body>
+</html>

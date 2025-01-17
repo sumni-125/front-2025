@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>총점, 평균 구하기</title>
+</head>
+<body>
+    <script>
+        let kor = parseInt(prompt("국어 점수를 입력하세요."))
+        let eng = parseInt(prompt("영어 점수를 입력하세요."))
+        let math = parseInt(prompt("수학 점수를 입력하세요."))
+
+        let sum = kor + eng + math
+        let avg = (sum / 3).toFixed(1) //toFixed(n) : 소수점 n자리 수까지 반올림67
+
+        document.write(`세 과목(국어, 수학, 영어)의 총점은 '${sum}점'이고, 평균은 '${avg}점'입니다.`)
+    </script>
+</body>
+</html>

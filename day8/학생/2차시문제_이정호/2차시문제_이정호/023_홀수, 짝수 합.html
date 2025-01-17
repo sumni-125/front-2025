@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홀수, 짝수 합</title>
+</head>
+<body>
+    <script>
+        let num = parseInt(prompt("숫자를 입력하세요."))
+        let oddNum = 0
+        let evenNum = 0
+
+        for(let i = 1; i <= num; i++){
+            if(i % 2 === 0){
+                evenNum += i
+            }else if(i % 2 === 1){
+                oddNum += i
+            }
+        }
+
+        document.write(`N = ${num}<br>`)
+        document.write(`${num} -> 홀수 합 = ${oddNum}<br>`)
+        document.write(`${num} -> 짝수 합 = ${evenNum}`)
+    </script>
+</body>
+</html>

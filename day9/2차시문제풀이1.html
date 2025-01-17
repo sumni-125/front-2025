@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let menu = prompt("분제 번호를 선택하세요(1-12)");
+
+        switch(menu){
+            case "1"://1. 자신의 정보를 출력하기 
+
+                let name1="이수민"
+                let birth="2002.12.05"
+                alert("이름: "+ name+", 생년월일: "+ birth);
+                break;
+            
+            case"2"://2. 짝수, 홀수 판별
+
+                let num=prompt("숫자를 입력하시오");
+                if(num%2==0){
+                    alert("짝수입니다.");
+                }else{
+                    alert("홀수입니다.");
+                }
+                break;
+
+            case"3"://3.  이름 , 국어, 영어, 수학 3과목이 입력될 때   총점과  평균을 출력하기 
+
+                let name2, ko, en, ma;
+                name2= prompt("이름을 입력하세요");
+                ko=parseInt(prompt("국어 점수를 입력하세요"));
+                en=parseInt(prompt("영어 점수를 입력하세요"));
+                ma=parseInt(prompt("수학 점수를 입력하세요"));
+                
+                let total=(ko+en+ma);
+
+                let avg=total/3;
+                alert(name+"님의 평균점수는 "+avg+"점");
+                break;
+
+            case"4":/*4. 최대값 구하기    
+            사용자가 입력한 세 개의 숫자 중 가장 큰 숫자를 출력하세요. 
+            */
+                let num1, num2, num3;
+                num1=prompt("첫번째 숫자를 입력하세요");
+                num2=prompt("두번째 숫자를 입력하세요");
+                num3=prompt("세번째 숫자를 입력하세요");
+                
+                let max=num1;
+                if(max<num2){
+                    max=num2;
+                }
+                if(max<num3){
+                    max=num3;
+                }
+                    
+                alert("가장 큰 숫자: "+max);
+                break;
+        
+            case"5"://5단
+                for(let i=1;i<=9;i++){
+                    console.log("5 * "+i+" = "+5*i);
+                }
+                break;
+
+            case"6"://7단
+                for(let i=1;i<=9;i++){
+                    console.log("7 * "+i+" = "+7*i);
+                }
+                break;
+
+            case"7"://3,5의 배수구하기
+                let i=1;
+                while(i<100){
+                    if(i%3==0){
+                        if(i%5==0){
+                            console.log("3과5의 공배수 "+i);
+                        }
+                        console.log("3의배수 "+i);
+                    }
+                    else if(i%5==0){
+                        console.log("5의배수 "+i);
+                    }
+                    else{
+                        console.log("나머지 숫자 "+i);
+                    }
+                    
+                    i++
+                }
+                
+                    
+                break;
+
+            case"8":/*8. 점수에 따른 등급 
+                        사용자가 입력한 점수에 따라 다음 등급을 출력하세요:
+
+                        90점 이상: "A"
+                        80점 이상: "B"
+                        70점 이상: "C"
+                        60점 이상: "D"
+                        60점 미만: "F"
+                        */
+                let grade = parseInt(prompt("점수를 입력하세요"));
+                if(grade >= 90){
+                    alert("A");
+                }else if(grade >= 80){
+                    alert("B");
+                }else if(grade >= 70){
+                    alert("C");
+                }else if(grade >= 60){
+                    alert("D");
+                }else{
+                    alert("F");
+                }
+
+                break;
+
+            case"9":// 수를 입력 받아 제곱을 구하기
+                let su9 = parseInt(prompt("숫자를입력하세요"));
+                sq=su9*su9;
+                alert(sq);
+                break;
+
+            case"10"://사용자가 입력한 두 숫자를 더한 결과를 출력하세요.
+                let num_1, num_2, sum;
+                num_1=parseInt(prompt("첫번째 숫자를 입력하세요"));
+                num_2=parseInt(prompt("두번째 숫자를 입력하세요"));
+                sum=num_1+num_2;
+                alert("두 숫자의 합은 "+sum);
+                break;
+
+            case"11"://사칙연산 계산기  (if, switch문)
+            //사용자가 입력한 두 숫자와 연산자(+, -, *, /)를 사용하여 결과를 출력하세요.
+                let num11, num12, k, res;
+                num11=parseInt(prompt("첫번째 숫자를 입력하세요"));
+                k=prompt("연산자를 입력하세요");
+                num12=parseInt(prompt("두번째 숫자를 입력하세요"));
+                
+                switch(k){
+                    case"+":
+                        res=num11+num12;
+                        break;
+                    case"-":
+                        res=num11-num12;
+                        break;
+                    case"*":
+                        res=num11*num12;
+                        break;
+                    case"/":
+                        res=num11/num12;
+                        break;
+                    default:
+                        alert("연산자를 다시 입력하세요");
+                    
+                }
+                alert("연산결과: "+res);
+                break;
+
+
+            case"12":
+                let su12 = parseInt(prompt("숫자를 입력하세요")) ;
+                let j=1;
+                while(j<su12){
+                    if(j%2==1){
+                        console.log(j);
+                    } 
+                    j++
+                }
+                break;
+
+            default:
+                alert("번호를 다시 입력해주세요.");
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

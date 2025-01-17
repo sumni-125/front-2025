@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let weight = Number(prompt("체중(kg)"));
+        let height = Number(prompt("신장(m)"));
+        let bmi = weight / (height * height);
+
+        if ((weight < 0 || weight == 0) || (height < 0 || height == 0)) {
+            alert("잘못된 입력입니다");
+        } else if (bmi < 18.5) {
+            alert("저체중");
+        } else if (18.5 <= bmi && bmi < 23) {
+            alert("저체중");
+        } else if (23 <= bmi && bmi < 25) {
+            alert("과체중");
+        } else if (bmi >= 25) {
+            alert("비만");
+        }
+
+
+    </script>
+</body>
+
+</html>

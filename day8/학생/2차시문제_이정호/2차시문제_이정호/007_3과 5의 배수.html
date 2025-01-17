@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3과 5의 배수</title>
+</head>
+<body>
+    <script>
+        let result_3 = ''
+        let result_5 = ''
+        let result_3and5 = ''
+        let remain = ''
+
+        for(let i = 1; i <= 100; i++){
+            if(i % 3 === 0){ result_3 += `${i}, ` }
+            if(i % 5 === 0){ result_5 += `${i}, ` }
+            if((i % 3 === 0) && (i % 5 === 0)) { result_3and5 += `${i}, ` }
+            if((i % 3 !== 0) && (i % 5 !== 0)) { remain += `${i}, ` }
+        }
+
+        document.write(`3의 배수 : ${result_3}<br><br>`)
+        document.write(`5의 배수 : ${result_5}<br><br>`)
+        document.write(`3과 5의 공배수 : ${result_3and5}<br><br>`)
+        document.write(`나머지 : ${remain}<br><br>`)
+    </script>
+</body>
+</html>
