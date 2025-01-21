@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //입력 : 학생성적 여러개: scores[]
+        //출력 : 총점 sum, 평균 avg
+
+        //준비 : 
+        //처리 :
+
+
+        //국어점수 다섯개 평균과 총점 구하기
+
+        let scores = [];
+
+        //성적 입력받기
+
+        while(true){
+            let i=0;
+            
+            let input = parseInt(prompt("점수입력"));
+            console.log(input);
+            scores[i]=input;
+            let a = confirm("계속하시겠습니까?");
+            if(a==false){
+                break;
+            }
+            i++;
+        }
+
+        //총점구하기
+        let sum=0;
+        
+        for(let i=0; i<scores.length ;i++){
+            sum+=scores[i];
+
+            console.log(sum);
+        }
+        console.log(sum);
+        document.write(sum);
+
+        let avg = sum/scores.length;
+        console.log(avg);
+        document.write(avg);
+
+    </script>
+</body>
+</html>
