@@ -24,14 +24,18 @@
             let i=0;
             
             let input = parseInt(prompt("점수입력"));
-            console.log(input);
-            scores[i]=input;
-            let a = confirm("계속하시겠습니까?");
-            if(a==false){
+            
+            if(input==NaN){
                 break;
+            }else{
+                console.log(input);
+                scores[i]=input;
+                
+                i++;
             }
-            i++;
+            
         }
+        console.log(scores.length);
 
         //총점구하기
         let sum=0;
