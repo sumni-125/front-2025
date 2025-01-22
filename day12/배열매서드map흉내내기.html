@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const 이름 = ['영숙', '순자','영자','옥순','현숙'];
+
+        //mymap: 함수이름
+        //입력: 함수(콜백함수)
+        //반환: 배열으; 요소를 변형한 새로운 반화ㅏㄴ
+
+        function maMap(f){
+            let newarr=[];
+            for(let i=0;i<이름.length;i++){
+                let item= 이름[i];
+                let newitem=f(item);
+                newarr.push(newitem);
+            }
+            return newarr;
+        }
+
+        let resultarr= myMap(function(item){ 
+            return item + "씨~^^"
+        });
+
+        console.log(resultarr);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="date200"></div>
+    <script>
+        /* let spec_D = new Date("2025-01-07");//200일후 ?
+        spec_D.setDate(spec_D.getDate()+200);
+
+        let year = spec_D.getFullYear();
+        let month =spec_D.getMonth()+1 ;// 0월부터   +1  해야 함 
+        let date =spec_D.getDate();
+        
+        document.querySelector(".date200").innerHTML = `${year} ${month} ${date}`;
+
+ */
+
+
+ 
+
+
+        let specDate = new Date("2025-01-07");  //200일 후?
+        specDate.setDate(specDate.getDate()  +200);
+
+        let year = specDate.getFullYear();
+        let month = specDate.getMonth()+1;
+        let date = specDate.getDate();
+
+        document.querySelector(".date200").innerHTML = `${year} ${month} ${date}`;
+
+
+
+    </script>
+</body>
+</html>
