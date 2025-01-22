@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //함수명: a
+        //기능: 매개변수로 전달된 함수를 3번 실행하는 함수
+        //입력: 함수(콜백함수)
+        //반환:x
+        function a(f){//매개변수로 함수를 받았으니까 => 고차함수라고 한다
+
+            for( let i=0;i<=3;i++){
+                f();
+            }
+        }
+
+        function b(){
+            document.write("돈까스");
+        }
+
+
+        a(b);
+
+        a(function(){
+            document.write("짜장면");
+        })
+
+        a( ()=>{
+            document.write("돈까스카레");
+        })
+
+    </script>
+</body>
+</html>
