@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ball{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px;
+            display: inline-block;
+            color: white;
+        }
+    </style>
+    <script>
+
+        /* function removelotto(){//생성된 ball 지우기??
+            const ball = document.getElementsByClassName("ball")[0];
+
+            ball.remove();
+        } */
+
+        /*
+        부모선택하기
+        랜덤숫자 6개 받기-> 배열에 저장
+
+        반복
+        공을 생성
+        스타일 추가
+        숫자 나타내기
+        부모영역에 추가
+
+        */
+        function createlotto(){
+
+            //버튼을 눌렀을떼 div안에 요소가 있으면? >> 이게뭔데
+            //  요소 지우기~~>실패 ㅋ
+            //
+            //removelotto();
+
+
+            // alert("됨?");
+
+
+            const lottonum = getlottonum();
+            console.log(lottonum);
+
+            const wrap = document.getElementById("wrap");//부모영역 선택택
+
+            for(let i=0;i<lottonum.length;i++){
+                const ball = document.createElement("div");
+                ball.classList.add("ball");//클래스를추가함
+                ball.innerHTML=lottonum[i];
+                wrap.appendChild(ball);//부모영역에 추가
+
+            }
+        }
+
+        function getlottonum(){
+            const lottoNumber=[];
+            for(let i=0;i<6;i++){
+                lottoNumber[i]=Math.floor(Math.random() * 45) + 1; // 1부터 45까지의 수
+            }
+            return lottoNumber;
+        }
+
+    </script>
+</head>
+<body>
+    <button class="btn" onclick="createlotto()">100% 적중률 보장!!!! 이번주 1등 당첨번호는???</button>
+    <div id="wrap">
+
+    </div>
+    
+</body>
+</html>

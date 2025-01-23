@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function style1(){
+            const wrap1 = document.querySelector(".wrap1");
+            wrap1.classList.add("style1");
+        }
+
+        function style2(){
+            const wrap2 = document.querySelector(".wrap2");
+            wrap2.classList.add("style2");
+        }
+
+    </script>
+    
+    <style>
+        .style1{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+        .style2{
+            width: 100px;
+            height: 100px;
+            background-color: violet;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="wrap1"></div>
+    <div class="wrap2"></div>
+
+    <button onclick="style1()">스타일1</button>
+    <button onclick="style2()">스타일2</button>
+
+
+</body>
+</html>
