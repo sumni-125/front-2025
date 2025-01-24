@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeText(){
+            const wrap = document.getElementsByClassName("wrap")[0];           
+            console.log(wrap);
+            wrap.innerHTML="빵빵";
+
+            /* const wrap1 = document.querySelectorAll(".wrap");
+            console.log(wrap1);
+            wrap1.innerHTML="빵빵"; */
+        }
+    </script>
+</head>
+<body>
+    <button onclick="changeText()">내용바꾸기</button>
+    <div class="wrap">뿡뿡</div>
+</body>
+</html>

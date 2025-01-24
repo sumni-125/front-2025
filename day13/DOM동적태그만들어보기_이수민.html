@@ -47,12 +47,15 @@
 
 
             // alert("됨?");
-
+            
 
             const lottonum = getlottonum();
             console.log(lottonum);
 
             const wrap = document.getElementById("wrap");//부모영역 선택택
+
+            wrap.innerHTML="";
+
 
             for(let i=0;i<lottonum.length;i++){
                 const ball = document.createElement("div");
@@ -65,8 +68,21 @@
 
         function getlottonum(){
             const lottoNumber=[];
-            for(let i=0;i<6;i++){
+            /* for(let i=0;i<6;i++){
                 lottoNumber[i]=Math.floor(Math.random() * 45) + 1; // 1부터 45까지의 수
+            } */
+           let i=0;
+            while(lottoNumber.length <6){
+                
+                let newNum=Math.floor(Math.random() * 45) + 1;
+                if(lottoNumber.includes(newNum) ){
+                    continue;
+                }else{
+                    lottoNumber[i]=newNum;
+                    i++;
+                    
+                }
+                
             }
             return lottoNumber;
         }

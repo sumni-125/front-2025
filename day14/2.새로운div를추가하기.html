@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .newDiv{
+            width: 50px;
+            height: 50px;
+            border: 2px solid palevioletred;
+            margin: 10px;
+
+            display: inline-block;
+        }
+    </style>
+    <script>
+        function addDiv(){
+            /*
+            부모 wrap에 div를 추가할것
+            
+            
+            */
+
+            const wrap = document.getElementById("wrap");
+
+
+            const newDiv = document.createElement("div");
+            newDiv.classList.add("newDiv");
+            //부모 아래에 추가
+
+            wrap.appendChild(newDiv);
+
+        }
+
+        function removeDiv(){
+            const wrap = document.getElementById("wrap");
+            wrap.innerHTML="";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="addDiv()">div를 추가하자~</button>
+    <button onclick="removeDiv()">div를 삭제하자~</button>
+    <div id="wrap">
+
+    </div>
+</body>
+</html>

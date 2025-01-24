@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function getLottoNumber(){
+            let lottoNumbers=[1,2,3,4,5,6];
+
+            return lottoNumbers;
+        }
+
+        //랸덤숫자 배열 반환
+        //입력: x
+        //반환: 중복되지 않는 랜덤 숫자배열
+
+        function getLottoNumber2(){
+            let lottoNumbers=[]; //let lottoNumbers = new Array(6);
+            let random = Math.floor(Math.random()*45); //0-44
+        }
+
+
+
+        
+        function getLottoNumber3(){ // 반복문으로 배열에에 랜덤숫자 6개 저장하기
+            let lottoNumbers=[]; //let lottoNumbers = new Array(6);
+            for(let i=0; i<6;i++){
+                let random = Math.floor(Math.random()*45); //0-44
+                lottoNumbers[i]=random;
+            }
+            console.log(lottoNumbers);
+
+            return lottoNumbers;
+        }
+
+
+
+        function getLottoNumber4(){ //중복없이 배열에 저장하기기
+
+
+            let lottoNumbers=[]; //let lottoNumbers = new Array(6);
+
+            while(lottoNumbers.length<6){
+                let random = Math.floor(Math.random()*45); 
+                    //Math.random()*45 : 0-44
+                    //Math.floor() : 소숫점 아래는 없애기
+
+                if(!lottoNumbers.includes(random)){// 랜덤수를 배열이 포함하고있지 않으면
+                    lottoNumbers.push(random); //lottoNumbers[i]=random;
+                    
+                }
+            }
+            console.log(lottoNumbers);
+
+            return lottoNumbers;
+        }
+
+        getLottoNumber4();
+
+    </script>
+
+
+
+</body>
+</html>
