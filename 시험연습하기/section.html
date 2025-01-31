@@ -22,9 +22,45 @@ li 안의 이미지(img태그 사용)크기 : 너비:200px, 높이:220px 설정
 (크기:130px, padding:10px, 글자색:red ,배경색:black
 */
 
+        section{
+            height : 600px;
+            display: flex;
+        }
+
+        .process{
+            display: flex;
+        }
+        .process>li{
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            border: 0.5px solid rgb(255 , 241 , 241 );;
+        }
+
+        .info{
+            width: 130px;
+            background-color: black;
+            color: red;
+            padding: 10px;
+        }
+
+        .img{
+            width: 200px;
+            height: 220px;
+        }
+
     </style>
 </head>
 <body>
+    <section>
+        <ul class="process">
+            <li class="info info1">bigdata</li>
+            <li class="img img1">
+                <img src="./images/img01.png" alt="img1">
+            </li>
+        </ul>
+       
+    </section>
     
     
 </body>

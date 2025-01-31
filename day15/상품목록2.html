@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul{
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+
+            justify-content: center;
+        }
+
+        ul li{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        img{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <script>
+
+        function init(){
+            //alert("init");
+
+            //서버에 데어터 요청하기
+
+            let products=[
+                {
+                    url:"./media/apple.png",
+                    title:"사과",
+                    price: "10,000"
+                },{
+                    url:"./media/banana.png",
+                    title:"바나나",
+                    price: "20,000"
+
+                },{
+                    url:"./media/mango.png",
+                    title:"망고",
+                    price: "30,000"
+                }
+            ];
+
+            console.log(products);
+
+            let product_list = document.querySelector(".product_list");
+            for(let i=0;i<products.length;i++){
+
+                let item = products[i];
+                console.log(item);
+
+                let li=document.createElement("li");
+                li.innerHTML=`<img src="${item.url} ">
+                <p>${item.title} </p>
+                <p>${item.price} </p>`;
+
+                //부모에 추가하기
+                product_list.appendChild(li);
+            }
+           
+        }
+    </script>
+</head>
+<body onload="init()">
+    
+
+    <ul class="product_list">
+        
+    </ul>
+</body>
+</html>

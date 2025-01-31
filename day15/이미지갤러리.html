@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery_wrap{
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            margin: 0 auto;
+        
+            position: relative;
+        }
+
+        .gallery{
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+
+            background-image: url(./media/Penguins.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .prebtn{
+            width: 30px;
+            height: 30px;
+            border: 1px solid black;
+
+            position: absolute;
+            top: 50%; /*transform 사용시 정가운데 놓을 수 있음*/
+            left: 0px;
+            transform: translate(0 50%);
+        }
+
+        .nextbtn{
+            width: 30px;
+            height: 30px;
+            border: 1px solid black;
+
+            position: absolute;
+            top: 50%;
+            right: 0px;
+            transform: translate(0 50%);
+        }
+
+
+    </style>
+    <script>
+        
+        let imgNames= ["media/Penguins.png", 
+             "media/Lighthouse.png",
+             "media/Chrysanthemum.png",
+             "media/Desert.png",
+             "media/Hydrangeas.png",
+             "media/Jellyfish.png",
+             "media/Koala.png",
+             "media/Tulips.png"
+        ] ;
+
+        let index=0
+
+        function next(){
+            
+            
+            
+            let gallery = document.querySelector(".gallery");
+            
+            gallery.style. backgroundImage="url("+ imgNames[index]+")";
+            gallery.style.backgroundPosition="center";
+            gallery. style.backgroundSize="cover";
+            
+            index++;
+
+            if(index>=imgNames.length){
+                index=0;
+            }
+            
+        }
+
+        function prev(){
+            
+            let gallery = document.querySelector(".gallery");
+            
+            gallery.style. backgroundImage="url("+ imgNames[index]+")";
+            gallery.style.backgroundPosition="center";
+            gallery. style.backgroundSize="cover";
+            
+            index--;
+
+            if(index<=0){
+                index=imgNames.length-1;
+            }
+            
+        }
+
+    </script>
+</head>
+<body>
+    
+    <div class="gallery_wrap">
+    
+        <!--갤러리 화면-->
+        <div class="gallery"></div>
+
+        
+
+        <!--버튼-->
+        <div class="prebtn" onclick="prev()"> <<</div>
+        <div class="nextbtn" onclick="next()"> >></div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            margin: 10px auto;
+            
+            position: relative;
+        }
+
+        .gallery_img{
+            width: 300px;
+            height: 300px;
+
+            background-image: url("./media/Penguins.png");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .gallery_text{
+            margin: 0 auto;
+            
+        }
+
+        .info{
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .info > div{
+            padding: 5px;
+        }
+
+        .btn{
+            height: 30px;
+            width: 30px;
+            border: 1px solid black;
+
+            position: absolute;
+        }
+
+        .prevBtn{
+           
+            top: 50%; /*transform 사용시 정가운데 놓을 수 있음*/
+            left: -15px;
+            transform: translateY(-50%);
+            background-color: red;
+        }
+
+        .nextBtn{
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: green;
+        }
+
+    </style>
+    <script>
+        let index=0;
+        let images=[
+            "media/Penguins.png", 
+            "media/Lighthouse.png",
+            "media/Chrysanthemum.png",
+            "media/Desert.png",
+            "media/Hydrangeas.png",
+            "media/Jellyfish.png",
+            "media/Koala.png",
+            "media/Tulips.png",
+            "media/apple.png",
+            "media/banana.png",
+            "media/mango.png",
+            "media/puppy.png",
+            "media/strawberry.png",
+            "media/beach.png",
+            "media/beach2.png",
+        ];
+
+        function next(){
+            //alert("다음으로");
+            index++;
+
+            if(index>=images.length){
+                index=0;
+            }
+
+            const gallery_img = document.querySelector(".gallery_img");
+
+            const fileName = document.querySelector(".fileName");
+            fileName.innerHTML=images[index];
+
+            gallery_img.style.backgroundImage="url("+images[index]+")";
+            gallery_img.style.backgroundSize="cover";
+            gallery_img.style.backgroundPosition="center";   
+
+        }
+
+        function prev(){
+            //alert("다음으로");
+            index--;
+
+            if(index<0){
+                index=images.length-1;
+            }
+
+            const gallery_img = document.querySelector(".gallery_img");
+
+            const fileName = document.querySelector(".fileName");
+            fileName.innerHTML=images[index];
+
+            gallery_img.style.backgroundImage="url("+images[index]+")";
+            gallery_img.style.backgroundSize="cover";
+            gallery_img.style.backgroundPosition="center";   
+
+        }
+    </script>
+</head>
+<body>
+    <div class="wrap">
+
+        <div class="gallery_img"></div>
+        <div class="gallery_text">
+            <div class="info">
+                <div>파일이름: </div>
+                <div class="fileName"> media/Penguins.png</div>
+            </div>
+            
+        </div>
+
+
+        <div class="btn prevBtn" onclick="prev()"></div>
+        <div class="btn nextBtn" onclick="next()"></div>
+    </div>
+</body>
+</html>

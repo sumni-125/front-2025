@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    
+    <script>
+        let food=[]
+        function makeArr(){
+            //menu클래스 밑에있는 메뉴정보를 가져오기
+            //배열에 넣기 
+            //배열을 콘솔로그 출력
+            let menu = document.querySelectorAll(".menu > div");
+            //console.log(menu);
+            /* for(let i=0;i<menu.length;i++){
+                food[i]=menu[i].innerHTML;
+                console.log(food[i]);
+            } */
+        
+            menu.forEach((item,index)=>{
+                food[index]=item;
+                console.log(food[index]);
+            })
+        }
+
+        function next(){
+
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="menu">
+        <div>돈까스</div>
+        <div>제육</div>
+        <div>오므라이스</div>
+        <div>카레돈까스</div>
+    </div>
+
+    <button onclick="makeArr()">클릭</button>
+</body>
+</html>
