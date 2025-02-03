@@ -25,26 +25,34 @@ li 안의 이미지(img태그 사용)크기 : 너비:200px, 높이:220px 설정
         section{
             height : 600px;
             display: flex;
+            
         }
 
         .process{
             display: flex;
+            list-style: none;
+            align-content: center;
         }
         .process>li{
             width: 300px;
             padding: 20px;
             text-align: center;
-            border: 0.5px solid rgb(255 , 241 , 241 );;
+            border: 0.5px solid rgb(255 , 241 , 241 );
+
+            position: relative;
         }
 
-        .info{
+        .text{
             width: 130px;
             background-color: black;
             color: red;
             padding: 10px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
         }
 
-        .img{
+        img{
             width: 200px;
             height: 220px;
         }
@@ -54,9 +62,20 @@ li 안의 이미지(img태그 사용)크기 : 너비:200px, 높이:220px 설정
 <body>
     <section>
         <ul class="process">
-            <li class="info info1">bigdata</li>
-            <li class="img img1">
-                <img src="./images/img01.png" alt="img1">
+            <li class="info info1">
+                <div class="text"> bigdata</div>
+                <div class="img"><img src="./images/img01.png" alt="img1"></div>
+               
+
+            </li>
+            <li >
+                <div class="text"> Android</div>
+                <div class="img"><img src="./images/img02.png" alt="img1"></div>
+            </li>
+
+            <li >
+                <div class="text"> Front</div>
+                <div class="img"><img src="./images/img03.png" alt="img1"></div>
             </li>
         </ul>
        
