@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        header{
+            height: 100px;
+            background-color: aliceblue;
+
+            position: relative;
+        }
+        header>div{
+            position: absolute;
+        }
+
+        .title{
+            top: 10px;
+            left: 20px;
+        }
+
+        .search{
+            
+            bottom: 30px;
+            right: 20px;
+            display: flex;
+        }
+
+        .search input{
+            padding: 0px;
+            width: 160px;
+            height: 30px;
+            box-sizing: border-box;
+            padding: 5px;
+            border: none;
+        }
+
+        .search img{
+            height: 30px;
+            width: 30px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        nav{
+            height: 60px;
+            background-color: rgb(209, 216, 221);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        nav>a{
+            text-decoration: none;
+            color: black;
+        }
+
+        
+
+        footer{
+            height: 100px;
+            background-color: azure;
+
+            display: flex;
+        }
+
+        footer>div{
+            width: 33%;
+            border: 1px solid black;
+        }
+        section{
+            padding: 50px;
+            height: 600px;
+        }
+
+        section>ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section ul li{
+            width: 200px;
+            height: 220px;
+             
+
+            margin: 20px;
+
+            position: relative;
+        }
+        .text{
+            text-align: center;
+            line-height: 40px;
+
+            background-color: black;
+            color: red;
+            width: 150px;
+            height: 40px;
+            position: absolute;
+            left: -30px;
+            top: -20px;
+        }
+        img{
+            height: 220px;
+            width: 200px;
+        }
+    </style>
+
+</head>
+<body>
+ 
+    <header>
+        <div class="title">타이틀</div>
+        <div class="search">
+            <input type="text"> <img src="./images/검색.png" alt="search">
+        </div>
+    </header>
+    <nav>
+        <a href="login.html">로그인</a> /
+        <a href="joinus.html">회원가입</a> /
+        <a href="index.html">홈으로</a>
+    </nav>
+    <section>
+
+        <ul>
+            <li>
+                <div class="text">bigdata</div>
+                <div class="section_img">
+                    <img src="./images/img01.png" alt="img1">
+                </div>
+            </li>
+            <li>
+                <div class="text">database</div>
+                <div class="section_img">
+                    <img src="./images/img02.png" alt="img1">
+                </div>
+            </li>
+            <li>
+                <div class="text">Android</div>
+                <div class="section_img">
+                    <img src="./images/img03.png" alt="img1">
+                </div>
+            </li>
+        </ul>
+
+
+    </section>
+    <footer>
+        <div></div>
+        <div></div>
+        <div></div>
+    </footer>
+
+
+</body>
+</html>

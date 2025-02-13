@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            height: 100px;
+            background-color:  rgb(245, 248, 248);
+            position: relative;
+        }
+        header .title{
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+        header .search{
+            display: flex;
+            position: absolute;
+            right:10px ;
+            bottom:20px;
+        }
+        header .search input{
+            height: 30px;
+            border: none;
+        }
+        header .search img{
+            width: 30px;
+            height: 30px;
+        }
+
+        nav{
+            height: 40px;
+            padding: 20px;
+            background-color: rgb(232, 243, 243);
+            position: relative;
+        }
+        nav .link{
+            position: absolute;
+            right: 10px;
+            padding-right: 30px;
+            line-height: 40px;
+        }
+
+        nav a{
+            text-decoration: none;
+            color:black;
+            
+        }
+
+        footer{
+            padding: 20px;
+            background-color:  rgb(233 , 239 , 239 );
+            display: flex;
+        }
+        footer .item{
+            width: 33%;
+        }
+
+        .log_wrap{
+            width: 400px;
+            padding: 20px;
+            border: 0.5px solid  rgb( 234, 222, 222) ;
+            margin: 0 auto;
+        }
+
+        .log_img{
+            width: 300px;
+            height: 300px;
+            background-image: url("../images/login_logo.jpg");
+            background-position: center;
+            background-size: cover;
+            margin: 0 auto;
+        }
+
+        .log_info{
+            box-sizing: border-box;
+            padding:10px;
+            
+        }
+
+        .log_info input{
+            width: 100%; 
+            padding:10px ;  
+            margin-top:3px ;
+            box-sizing: border-box;
+        }
+
+        .log_info button{
+            background-color: silver;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            margin-top: 10px;
+        }
+
+    </style>
+
+
+    <script>
+
+        function check(){
+
+            
+
+            const form = document.form;
+
+            
+           // const  id= form.userid;id.innerHTML
+            const userid = form.userid;
+            //const pwd= pwd.innerHTML;
+            const userpwd =  form.userpwd;
+            console.log(userpwd); 
+            
+            if(userid ==""){
+                alert ("아이디를 입력하세요.");
+                focus.userid;
+            }else if(userpwd==""){
+                alert("비밀번호를 입력하세요.");
+                focus.userpwd;
+            }else{
+                alert("로그인중...");
+            } 
+
+        }
+    </script>
+    
+</head>
+<body>
+    <header>
+        <div class="title">
+            <img src="../images/logo.png" alt="logo">
+        </div>
+        <div class="search">
+            <input type="text"> <img src="../images/검색.png" alt="검색">
+        </div>
+    </header>
+
+
+    <nav>
+        <div class="link">
+            <a href="login.html">로그인</a> |
+            <a href="index.html">홈으로</a>
+        </div>
+        
+    </nav>
+
+    <form name="form">
+
+        <div class="log_wrap">
+            <div class="log_img"></div>
+            <div class="log_info">
+
+                <input type="text"  placeholder="아이디" name="userid">
+                <input type="password" placeholder="비번" name="userpwd">
+                <button type="button" onclick="check()"> 로그인</button>
+            </div>
+        </div> 
+
+    </form>
+
+    
+
+
+    <footer>
+        <div class="item" >
+            <img src="../images/footer_acorn.png" alt="footer">
+        </div>
+        <div class="item"> 에이콘ACADEMY(홍대) </div>
+        <div class="item"> COPYRIGHT(C) HBILAB ALL RIGHTS RESERVED.</div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box::before{
+            content:"이전 내용";
+            background-color: palevioletred;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .box::after{
+            content: "이후 내용";
+            background-color: skyblue;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+
+        <p>html</p>
+        <p>css</p>
+        <p>javascript</p>
+
+    </div>
+
+
+</body>
+</html>

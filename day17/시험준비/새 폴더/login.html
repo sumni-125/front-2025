@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        header{
+            height: 100px;
+            background-color: aliceblue;
+
+            position: relative;
+        }
+        header>div{
+            position: absolute;
+        }
+
+        .title{
+            top: 10px;
+            left: 20px;
+        }
+
+        .search{
+            
+            bottom: 30px;
+            right: 20px;
+            display: flex;
+        }
+
+        .search input{
+            padding: 0px;
+            width: 160px;
+            height: 30px;
+            box-sizing: border-box;
+            padding: 5px;
+            border: none;
+        }
+
+        .search img{
+            height: 30px;
+            width: 30px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        nav{
+            height: 60px;
+            background-color: rgb(209, 216, 221);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        nav>a{
+            text-decoration: none;
+            color: black;
+        }
+
+        footer{
+            height: 100px;
+            background-image: azure;
+
+            display: flex;
+        }
+        footer>div{
+            width: 33%;
+            border: 1px solid black;
+        }
+
+        form{
+            padding: 30px;
+        }
+
+        .login_wrap{
+            border: 1px solid black;
+            width: 300px;
+            height: 500px;
+            text-align: center;
+            margin: 0 auto;
+
+            padding: 20px;
+        }
+
+        .login_img{
+            margin: 20px auto;
+            height: 200px;
+            width: 200px;
+            background-image: url("images/login_logo.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        .user_info{
+            margin: 10px auto;
+            width: 210px;
+            box-sizing: border-box;
+        }
+        .user_info input{
+            margin: 5px;
+            padding: 0px;
+            height: 30px;
+            width: 200px;
+        }
+
+        .user_info button{
+            height: 35px;
+            width: 200px;
+            margin: 5px;
+        }
+    </style>
+
+    <script>
+        function check(){
+            const frn = document.frm;
+            const userid= frm.userid.value;
+            const userpwd= frm.userpwd.value;
+            if(userid==""){
+                alert("아이디를 입력하세요.");
+                
+            }else if(userpwd==""){
+                alert("패스워드를 입력하세요.");
+            }else{
+                alert("로그인 중...");
+            }
+            
+        }
+    </script>
+
+</head>
+<body>
+    <header>
+        <div class="title">타이틀</div>
+        <div class="search">
+            <input type="text"> <img src="./images/검색.png" alt="search">
+        </div>
+    </header>
+    <nav>
+        <a href="login.html">로그인</a> /
+        <a href="joinus.html">회원가입</a> /
+        <a href="index.html">홈으로</a>
+    </nav>
+    <form name="frm">
+        <div class="login_wrap">
+            <div class="login_img"></div>
+            <div class="user_info">
+                <input type="text" name="userid" placeholder="아이디">
+                <input type="password" name="userpwd" placeholder="비밀번호">
+                <button type="button" onclick="check()">로그인</button>
+            </div>
+        </div>
+    </form>
+    
+    <footer>
+        <div></div>
+        <div></div>
+        <div></div>
+    </footer>
+
+
+</body>
+</html>
